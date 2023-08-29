@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane focusTraversable="true" prefHeight="500.0" prefWidth="570.0" style="-fx-background-color: #999999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyCustomerController">
+    <VBox alignment="CENTER" layoutX="128.0" layoutY="1.0" prefHeight="459.0" prefWidth="314.0" spacing="20">
+
+        <Label text="Customer Information" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="24.0" />
+            </font>
+        </Label>
+
+
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <!-- Row 0: Customer ID -->
+            <Label text="Customer ID" textFill="#131b8d">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <TextField fx:id="Customer_ID" disable="true" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" />
+
+
+            <Label text="Name" textFill="#131b8d" GridPane.rowIndex="1">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <TextField fx:id="Customer_Name" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+
+            <Label text="Phone" textFill="#131b8d" GridPane.rowIndex="2">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <TextField fx:id="Customer_Phone" style="-fx-border-color: #000000; -fx-background-color: #c5c5c5; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+
+            <Label text="Address" textFill="#131b8d" GridPane.rowIndex="3">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <TextField fx:id="Customer_Address" style="-fx-border-color: #000000; -fx-background-color: #c5c5c5; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+
+            <Label text="Country" textFill="#131b8d" GridPane.rowIndex="4">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <ComboBox fx:id="Customer_Country" prefWidth="150.0" promptText="Select" style="-fx-border-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+
+            <Label text="State/Province" textFill="#131b8d" GridPane.rowIndex="5">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <ComboBox fx:id="Customer_Division" onMouseClicked="#Division_Selected" prefWidth="150.0" promptText="Select" style="-fx-border-color: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+
+            <Label text="Postal Code" textFill="#131b8d" GridPane.rowIndex="6">
+                <font><Font name="SansSerif Bold" size="13.0" /></font>
+            </Label>
+            <TextField fx:id="Customer_Postal_Code" style="-fx-background-color: #C5C5C5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+
+        <HBox alignment="CENTER" spacing="15">
+            <Button fx:id="Save_Customer_Changes" mnemonicParsing="false" onAction="#Save_Customer_Changes" style="-fx-background-color: #131b8d;" text="Save Changes" textFill="WHITE">
+                <font>
+                    <Font name="SansSerif Bold" size="16.0" />
+                </font>
+            </Button>
+            <Button fx:id="Cancel_Customer_Changes" mnemonicParsing="false" onAction="#Cancel_Changes" style="-fx-background-color: #131b8d;" text="Cancel" textFill="WHITE">
+                <font>
+                    <Font name="SansSerif Bold" size="16.0" />
+                </font>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

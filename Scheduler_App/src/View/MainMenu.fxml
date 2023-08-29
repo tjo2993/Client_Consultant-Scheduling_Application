@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1051.0" style="-fx-background-color: #B3B6B7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+
+    <!-- Appointments Section -->
+    <Label layoutX="324.0" layoutY="14.0" text="Scheduled Appointments" textFill="#141b8d" underline="true">
+        <font>
+            <Font name="SansSerif Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <TableView fx:id="Appointment_List_Table" layoutX="14.0" layoutY="59.0" prefHeight="205.0" prefWidth="909.0" style="-fx-background-color: lightgrey;">
+        <style>
+            .table-row-cell {
+            -fx-background-color: lightgrey;
+            }
+        </style>
+        <columns>
+            <TableColumn fx:id="Associated_User_ID" prefWidth="60.0" text="User ID" />
+            <TableColumn fx:id="Appointment_ID" prefWidth="46.0" text="Appointment ID" />
+            <TableColumn fx:id="Appointment_Type" prefWidth="124.0" text="Type" />
+            <TableColumn fx:id="Appointment_Title" prefWidth="113.0" text="Title" />
+            <TableColumn fx:id="Appointment_Description" prefWidth="82.0" text="Description" />
+            <TableColumn fx:id="Appointment_Location" prefWidth="79.0" text="Location" />
+            <TableColumn fx:id="Appointment_Start" prefWidth="125.0" text="Start" />
+            <TableColumn fx:id="Appointment_End" prefWidth="129.0" text="End" />
+            <TableColumn fx:id="Associated_Customer_ID" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="Appointment_Contact" prefWidth="75.0" text="Contact ID" />
+        </columns>
+    </TableView>
+
+    <RadioButton fx:id="View_By_Week" layoutX="168.0" layoutY="279.0" mnemonicParsing="false" text="Week " textFill="#131b8d">
+        <toggleGroup>
+            <ToggleGroup fx:id="Toggle_The_View" />
+        </toggleGroup>
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font>
+    </RadioButton>
+    <RadioButton fx:id="View_By_Month" layoutX="96.0" layoutY="279.0" mnemonicParsing="false" text="Month" textFill="#131b8d" toggleGroup="$Toggle_The_View">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></RadioButton>
+    <RadioButton fx:id="View_All" layoutX="243.0" layoutY="279.0" mnemonicParsing="false" selected="true" text="All" textFill="#131b8d" toggleGroup="$Toggle_The_View">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></RadioButton>
+    <Label fx:id="User_Local_Time" layoutX="709.0" layoutY="10.0" prefHeight="17.0" prefWidth="275.0" text="Current Time Label" textFill="#131b8d">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Label>
+    <Label fx:id="Eastern_Local_Time" layoutX="709.0" layoutY="26.0" prefHeight="17.0" prefWidth="275.0" text="EST Time Label" textFill="#131b8d">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Label>
+
+    <Label layoutX="327.0" layoutY="313.0" text="Customer Table" textFill="#141b8d" underline="true">
+        <font>
+            <Font name="SansSerif Bold" size="24.0" />
+        </font>
+    </Label>
+    <TableView fx:id="Customer_List_Table" layoutX="18.0" layoutY="350.0" prefHeight="205.0" prefWidth="800.0" style="-fx-background-color: lightgrey;">
+        <style>
+            .table-row-cell {
+            -fx-background-color: lightgrey;
+            }
+        </style>
+        <columns>
+            <TableColumn fx:id="Customer_ID" prefWidth="83.0" text="Customer ID" />
+            <TableColumn fx:id="Customer_Name" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="Customer_Phone" prefWidth="118.0" text="Phone" />
+            <TableColumn fx:id="Customer_Address" prefWidth="151.0" text="Address" />
+            <TableColumn fx:id="Customer_ZIP_Code" prefWidth="99.0" text="Postal Code" />
+            <TableColumn fx:id="Customer_Division" prefWidth="111.0" text="Division ID" />
+        </columns>
+    </TableView>
+
+    <!-- Buttons -->
+    <Button fx:id="Add_Appointment" layoutX="483.0" layoutY="275.0" mnemonicParsing="false" onAction="#AddAppointment" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #131b8d;" text="Add Appointment" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="Modify_Appointment" layoutX="622.0" layoutY="275.0" mnemonicParsing="false" onAction="#ModifyAppointment" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #131b8d;" text="Edit Appointment" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="Delete_Appointment" layoutX="759.0" layoutY="275.0" mnemonicParsing="false" onAction="#DeleteAppointment" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #131b8d;" text="Delete Appointment" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="Add_Customer" layoutX="576.0" layoutY="560.0" mnemonicParsing="false" onAction="#AddCustomer" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #131b8d;" text="Add Customer" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="Modify_Customer" layoutX="688.0" layoutY="560.0" mnemonicParsing="false" onAction="#ModifyCustomer" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #131b8d;" text="Edit Customer" textFill="#f8f8f8">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="Delete_Customer" layoutX="797.0" layoutY="560.0" mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #131b8d;" text="Delete Customer" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="Logout_Application" layoutX="952.0" layoutY="557.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: #131b8d;" text="Logout" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="18.0" />
+      </font></Button>
+    <Button layoutX="64.0" layoutY="560.0" mnemonicParsing="false" onAction="#Reports" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #131b8d;" text="Scheduling Application Reports" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="14.0" />
+      </font></Button>
+   <Label layoutX="29.0" layoutY="280.0" text="View By:" textFill="#131b8d">
+      <font>
+         <Font name="SansSerif Bold" size="12.0" />
+      </font></Label>
+</AnchorPane>

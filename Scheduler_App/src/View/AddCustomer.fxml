@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #999999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddCustomerController">
+
+        <Label disable="true" layoutX="94.0" layoutY="86.0" text="Customer ID" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField layoutX="-442.0" layoutY="-25.0" />
+        <TextField fx:id="Customer_ID" disable="true" editable="false" layoutX="200.0" layoutY="80.0" promptText="Auto Generated" style="-fx-border-color: #000000; -fx-border-radius: 2px;" />
+        <Label layoutX="107.0" layoutY="126.0" text="Full Name" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="Customer_Name" layoutX="200.0" layoutY="120.0" style="-fx-border-color: #000000; -fx-border-radius: 2px; -fx-background-color: #c5c5c5;" />
+        <Label layoutX="127.0" layoutY="166.0" text="Phone" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="Customer_Phone" layoutX="200.0" layoutY="160.0" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" />
+        <Label layoutX="117.0" layoutY="206.0" text="Address" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="Customer_Address" layoutX="200.0" layoutY="200.0" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" />
+        <Label layoutX="92.0" layoutY="326.0" text="Postal Code" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="Customer_ZIP_Code" layoutX="200.0" layoutY="320.0" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" />
+        <Label layoutX="117.0" layoutY="246.0" text="Country" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="Customer_Country" layoutX="200.0" layoutY="240.0" prefWidth="150.0" style="-fx-border-radius: 2px; -fx-border-color: #000000;" />
+        <Label layoutX="78.0" layoutY="286.0" text="State/Province" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="Customer_Division_Group" layoutX="200.0" layoutY="280.0" onMouseClicked="#Select_Division" prefWidth="150.0" style="-fx-border-color: #000000; -fx-border-radius: 2px;" />
+        <Button fx:id="Save_New_Customer" layoutX="29.0" layoutY="442.0" mnemonicParsing="false" onAction="#saveCustomerOnAction" style="-fx-background-color: #131b8d;" text="Add Customer" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="16.0" />
+      </font></Button>
+        <Button fx:id="Cancel_Add_Customer" layoutX="314.0" layoutY="442.0" mnemonicParsing="false" onAction="#MainScreenLoad" style="-fx-background-color: #131b8d;" text="Cancel" textFill="WHITE">
+      <font>
+         <Font name="SansSerif Bold" size="16.0" />
+      </font></Button>
+        <Label layoutX="130.0" layoutY="26.0" text="New Customer" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="24.0" />
+            </font>
+        </Label>
+</AnchorPane>

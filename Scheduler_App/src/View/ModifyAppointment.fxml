@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="570.0" prefWidth="653.0" style="-fx-background-color: #999999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyAppointmentController">
+    <GridPane hgap="10" layoutX="50" layoutY="50" vgap="10">
+
+        <!-- Appointment ID -->
+        <Label text="Appointment ID" textFill="#131b8d" GridPane.rowIndex="1">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <TextField fx:id="Appointment_ID" disable="true" style="-fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Appointment Title -->
+        <Label text="Title" textFill="#131b8d" GridPane.rowIndex="2">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <TextField fx:id="Appointment_Title" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!-- Description -->
+        <Label text="Description" textFill="#131b8d" GridPane.rowIndex="3">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <TextField fx:id="Appointment_Description" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <!-- Location -->
+        <Label text="Location" textFill="#131b8d" GridPane.rowIndex="4">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <TextField fx:id="Appointment_Location" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <!-- Appointment Type -->
+        <Label prefHeight="17.0" prefWidth="128.0" text="Appointment Type" textFill="#131b8d" GridPane.rowIndex="5">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <ComboBox fx:id="Appointment_Type" prefHeight="27.0" prefWidth="177.0" promptText="Select" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <!-- Start Date and Time -->
+        <Label text="Start Date" textFill="#131b8d" GridPane.rowIndex="6">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <DatePicker fx:id="Appointment_Start_Date" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-background-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label text="Start Time" textFill="#131b8d" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <ComboBox fx:id="Appointment_Start_Time" prefHeight="25.0" prefWidth="88.0" promptText="Select" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+
+        <!-- End Date and Time -->
+        <Label text="End Date" textFill="#131b8d" GridPane.rowIndex="7">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <DatePicker fx:id="Appointment_End_Date" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Label prefHeight="16.0" prefWidth="64.0" text=" End Time" textFill="#131b8d" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <ComboBox fx:id="Appointment_End_Time" prefHeight="25.0" prefWidth="87.0" promptText="Select" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+
+        <!-- Customer ID, User ID, Contact ID -->
+        <Label text="Customer ID" textFill="#131b8d" GridPane.rowIndex="8">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <ComboBox fx:id="Customer_ID" prefHeight="27.0" prefWidth="107.0" promptText="Select" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Label text="User ID" textFill="#131b8d" GridPane.rowIndex="9">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <ComboBox fx:id="User_ID" prefHeight="27.0" prefWidth="107.0" promptText="Select" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Label text="Contact ID" textFill="#131b8d" GridPane.rowIndex="10">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+        <ComboBox fx:id="Contact_ID" prefHeight="27.0" prefWidth="107.0" promptText="Select" style="-fx-background-color: #c5c5c5; -fx-border-color: #000000; -fx-border-radius: 2px;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+        <!-- Notice -->
+        <Label fx:id="Business_Hours" text="Time Notice" textFill="#131b8d" wrapText="true" GridPane.columnSpan="4" GridPane.rowIndex="11">
+         <font>
+            <Font name="SansSerif Bold" size="13.0" />
+         </font></Label>
+
+        <!-- Buttons -->
+        <Button fx:id="Save_Appointment" onAction="#Save_Appointment" style="-fx-background-color: #131b8d;" text="Update Appointment" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="13">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font></Button>
+        <Button fx:id="Cancel_Appointment_Changes" onAction="#Cancel_Appointment_Change" style="-fx-background-color: #131b8d;" text="Cancel" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="13">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font></Button>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+     <!-- Title -->
+     <Label layoutX="184.0" layoutY="14.0" text="Modify Appointment" textFill="#131b8d">
+         <font>
+             <Font name="SansSerif Bold" size="24.0" />
+         </font>
+     </Label>
+</AnchorPane>

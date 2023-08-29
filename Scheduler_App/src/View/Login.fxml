@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="564.0" prefWidth="466.0" style="-fx-background-color: #999999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+    <VBox alignment="CENTER" spacing="30" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.topAnchor="40">
+
+        <!-- Title -->
+        <Label fx:id="Scheduling_Application" text="SCHEDULING APPLICATION" textFill="#131b8d">
+            <font>
+                <Font name="SansSerif Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Subtitle -->
+        <Label fx:id="Sign_In_Below" text="Sign In Below" textFill="#141b8d">
+            <font>
+                <Font name="SansSerif Bold" size="13.0" />
+            </font>
+        </Label>
+
+        <!-- Username -->
+        <VBox prefHeight="33.0" prefWidth="340.0" spacing="10">
+            <Label fx:id="User_Login" alignment="TOP_LEFT" text="Username" textFill="#131b8d">
+                <font>
+                    <Font name="SansSerif Bold" size="18.0" />
+                </font>
+            </Label>
+            <TextField fx:id="User_Name_Field" centerShape="false" maxWidth="140.0" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: C5C5C5; -fx-border-color: #000000; -fx-border-radius: 2px;" />
+        </VBox>
+
+        <!-- Password -->
+        <VBox spacing="10">
+            <Label fx:id="User_Password" alignment="TOP_LEFT" text="Password" textFill="#131b8d">
+                <font>
+                    <Font name="SansSerif Bold" size="18.0" />
+                </font>
+            </Label>
+            <PasswordField fx:id="User_Password_Field" maxHeight="50.0" maxWidth="175.0" prefHeight="20.0" prefWidth="175.0" style="-fx-background-color: C5C5C5; -fx-border-color: #000000; -fx-border-radius: 2px;" />
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox spacing="20">
+            <Button fx:id="Button_Sign_In" alignment="CENTER" mnemonicParsing="false" onAction="#Sign_In_Validate" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #131b8d;" text="Sign In" textFill="WHITE">
+                <font>
+                    <Font name="SansSerif Bold" size="16.0" />
+                </font>
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </Button>
+            <Button fx:id="Button_Exit" alignment="CENTER" mnemonicParsing="false" onAction="#ExitApplication" prefHeight="45.0" style="-fx-background-color: #131b8d;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="SansSerif Bold" size="14.0" />
+                </font></Button>
+        </HBox>
+
+        <!-- User Location -->
+        <HBox alignment="CENTER_LEFT" maxWidth="265.0" prefHeight="20.0" prefWidth="265.0" spacing="10">
+            <Label fx:id="User_Geolocation" prefHeight="16.0" prefWidth="109.0" text="User Location:" textFill="#131b8d">
+                <font>
+                    <Font name="SansSerif Bold" size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="User_Geolocation_Secondary" prefHeight="20.0" prefWidth="145.0" text="...">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+    </VBox>
+</AnchorPane>

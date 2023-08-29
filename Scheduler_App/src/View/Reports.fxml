@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="828.0" prefWidth="921.0" style="-fx-background-color: #B3B6B7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+    <ScrollPane fitToWidth="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+    <VBox alignment="CENTER" prefHeight="788.0" prefWidth="889.0" spacing="10.0" style="-fx-padding: 10; -fx-border-width: 1px; -fx-background-color: #B3B6B7;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+
+
+        <!-- Appointment Types By Month Section -->
+        <VBox spacing="10">
+            <Label alignment="CENTER" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Appointment Types By Month" textFill="#131b8d" underline="true">
+            <font>
+               <Font name="SansSerif Bold" size="16.0" />
+            </font></Label>
+            <Label alignment="CENTER" text="This report displays appointments by appointment appointment_Type, the month they occur, and the count for each appointment appointment_Type." textFill="#131b8d" wrapText="true">
+            <font>
+               <Font name="SansSerif Regular" size="13.0" />
+            </font></Label>
+            <TableView fx:id="MonthlyAppointmentsByType" prefHeight="200.0">
+                <!-- Similar column widths for consistency -->
+                <columns>
+                    <TableColumn fx:id="Report_Type" prefWidth="123.0" text=" Appointment Type" />
+                    <TableColumn fx:id="Appointment_Month" prefWidth="123.0" text="Month" />
+                    <TableColumn fx:id="Appointment_Total_Monthly" prefWidth="123.0" text="Count" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Contact Schedule Section -->
+        <VBox spacing="10">
+            <Label alignment="CENTER" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Contact Schedule" textFill="#131b8d" underline="true">
+            <font>
+               <Font name="SansSerif Bold" size="16.0" />
+            </font></Label>
+            <Label alignment="CENTER" text="Displays the schedule for each contact." textFill="#131b8d" wrapText="true">
+            <font>
+               <Font name="SansSerif Regular" size="13.0" />
+            </font></Label>
+            <TableView fx:id="ContactScheduleTable" prefHeight="200.0">
+                <columns>
+                    <TableColumn fx:id="Appointment_Contact" prefWidth="105.0" text="Contact Name" />
+                    <TableColumn fx:id="Appointment_Customer" prefWidth="105.0" text="Customer ID" />
+                    <TableColumn fx:id="Appointment_ID" prefWidth="105.0" text="Appointment ID" />
+                    <TableColumn fx:id="Appointment_Type" prefWidth="105.0" text="Appointment Type" />
+                    <TableColumn fx:id="Appointment_Title" prefWidth="105.0" text="Appointment Title" />
+                    <TableColumn fx:id="Appointment_Description" prefWidth="105.0" text="Appointment Description" />
+                    <TableColumn fx:id="Appointment_Start_Time" prefWidth="105.0" text="Start Time" />
+                    <TableColumn fx:id="Appointment_End_Time" prefWidth="105.0" text="End Time" />
+
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Number Of Customers By Contact Section -->
+        <VBox spacing="10">
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="266.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Number Of Customers By Contact" textFill="#131b8d" underline="true">
+            <font>
+               <Font name="SansSerif Bold" size="16.0" />
+            </font></Label>
+            <Label alignment="CENTER" text="Displays the customer count by country for each contact." textFill="#131b8d" wrapText="true">
+            <font>
+               <Font name="SansSerif Regular" size="13.0" />
+            </font></Label>
+            <TableView fx:id="CustomersByContact" prefHeight="168.0" prefWidth="854.0">
+                <columns>
+                    <!-- Adjusted column widths for better alignment with previous tables -->
+                    <TableColumn fx:id="Contact_ID" prefWidth="123.0" text="Contact ID" />
+                    <TableColumn fx:id="Contact_Name" prefWidth="103.0" text="Contact Name" />
+                    <TableColumn fx:id="Contact_Email" prefWidth="120.0" text="Contact Email" />
+                    <TableColumn fx:id="Customer_Count" prefWidth="169.0" text="Number Of Customers" />
+                    <TableColumn fx:id="Customer_Country" prefWidth="122.0" text="Customer Country" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Main Menu Return Button -->
+        <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="854.0">
+            <!-- A subtle button style for enhanced look -->
+            <Button graphicTextGap="2.0" onAction="#onActionCancel" style="-fx-background-color: #131b8d; -fx-padding: 10 10; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Main Menu" textFill="WHITE">
+            <font>
+               <Font name="SansSerif Bold" size="16.0" />
+            </font></Button>
+        </HBox>
+    </VBox>
+    </ScrollPane>
+</AnchorPane>
